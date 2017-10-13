@@ -1,0 +1,4 @@
+# WPFCode
+本库主要是工作中总结、搜集和整理的一些有用的代码，主要是针对Wpf相关控件和类的一些扩展
+
+2017.10.13 添加了ColumnDefinitionExtended类，扩展了WPF中ColumnDefinition类，增加了Visible属性，以支持Grid中列的显示和隐藏
