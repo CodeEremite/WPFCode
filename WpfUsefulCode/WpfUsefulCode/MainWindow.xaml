@@ -15,7 +15,7 @@
                 <ex:ColumnDefinitionExtended Width="auto"></ex:ColumnDefinitionExtended>
                 <ex:ColumnDefinitionExtended Width="*"></ex:ColumnDefinitionExtended>
             </Grid.ColumnDefinitions>
-            <Button Content="111" Grid.Column="0" />
+            <Button Content="111" Grid.Column="0"/>
             <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
             <Button Content="222" Grid.Column="2" />
         </Grid>
