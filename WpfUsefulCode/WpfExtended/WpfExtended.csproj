@@ -43,7 +43,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ColumnDefinitionExtended.cs" />
+    <Compile Include="Controls\ColumnDefinitionExtended.cs" />
+    <Compile Include="MVVM\CustomCommand.cs" />
+    <Compile Include="MVVM\RelayCommandGeneric.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
