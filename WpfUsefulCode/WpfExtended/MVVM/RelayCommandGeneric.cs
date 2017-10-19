@@ -37,25 +37,45 @@ namespace WpfExtended.MVVM
             {
                 if(!_isAutomaticRequeryDisabled)
                 {
-                    CommandManager.RequerySuggested += value;
+                    CommandManager.RequerySuggested -= value;
                 }
             }
         }
 
         public bool CanExecute(object parameter)
         {
-            if(_canExecuteMethod != null && parameter is T)
+            if (_canExecuteMethod == null)
             {
-                _canExecuteMethod((T)parameter);
+                return true;
             }
-            return true;
+
+            if(parameter == null && typeof(T).IsValueType)
+            {
+                return _canExecuteMethod(default(T));
+            }
+
+            if(parameter == null || parameter is T)
+            {
+                return _canExecuteMethod((T)parameter);
+            }
+            return false;
         }
 
         public void Execute(object parameter)
         {
-            if(_executeMethod != null && parameter is T)
+            if(_executeMethod != null)
             {
-                _executeMethod((T)parameter);                   
+                if(parameter == null && typeof(T).IsValueType)
+                {
+                    _executeMethod(default(T));                   
+                    return;
+                }
+
+                if( parameter == null || parameter is T)
+                {
+                    _executeMethod((T)parameter);
+                    return;
+                }
             }
         }
     }
