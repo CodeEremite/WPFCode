@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\ColumnDefinitionExtended.cs" />
-    <Compile Include="MVVM\CustomCommand.cs" />
+    <Compile Include="MVVM\RelayCommand.cs" />
     <Compile Include="MVVM\RelayCommandGeneric.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
